@@ -2,6 +2,10 @@
 
 Tarefa da sula síncrona do dia 29/01 - Atividade 2.
 
+## Vídeo de Apresentação
+
+[https://youtube.com/shorts/8SXNiLzMIlk?feature=share](https://youtube.com/shorts/8SXNiLzMIlk?feature=share "https://youtube.com/shorts/8SXNiLzMIlk?feature=share")
+
 ## Instruções de uso
 
 1. Conecte o **BitDogLab** ao computador usando o cabo micro-USB.
