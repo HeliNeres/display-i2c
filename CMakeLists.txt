@@ -35,10 +35,13 @@ pico_sdk_init()
 
 # Add executable. Default name is the project name, version 0.1
 
-add_executable(display-i2c display-i2c.c )
+add_executable(display-i2c display-i2c.c inc/ssd1306.c matriz/desenho.c)
 
 pico_set_program_name(display-i2c "display-i2c")
 pico_set_program_version(display-i2c "0.1")
+
+# Generate PIO header
+pico_generate_pio_header(display-i2c ${CMAKE_CURRENT_LIST_DIR}/matriz.pio)
 
 # Modify the below lines to enable/disable output over UART/USB
 pico_enable_stdio_uart(display-i2c 1)
@@ -55,7 +58,8 @@ target_include_directories(display-i2c PRIVATE
 
 # Add any user requested libraries
 target_link_libraries(display-i2c 
-        
+        hardware_i2c
+        hardware_pio
         )
 
 pico_add_extra_outputs(display-i2c)
